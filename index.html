@@ -28,11 +28,27 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+    <section class="container">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <div class="row" id="1am">
+        <div class="col-2">
+          <p>1:00 AM</p>
+        </div>
+        <div class="col-8">
+          <textarea class="form-control" id="input1am"></textarea>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-info">Save</button>
+        </div>
+      </div>
+
+    
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js" 
+      integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
