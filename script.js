@@ -1,9 +1,9 @@
-var a = moment().format("hh").toString();
+var a = moment().format('DD/MM/YYYY').toString();
 var b = moment().format("hh");
 
 document.getElementById('currentDay').innerHTML = a;
 
-// Code for 1am block
+// Code for 9am block
 var input1am = document.getElementById('input1am');
 var btn1am = document.getElementById("1ambtn");
 var del1am = document.getElementById("1amdel");
@@ -22,16 +22,16 @@ function check1am() {
         let x = localStorage.getItem("task1am");
         input1am.innerText = x;
     }
-    if (b == "01") {
+    if (b == "09") {
         block1am.classList.add("present");
-    } else if (b > "01") {
+    } else if (b > "09") {
         block1am.classList.add("past");
     } else {
         block1am.classList.add("future");
     }
 }
 
-// Code for 2am block
+// Code for 10am block
 var input2am = document.getElementById('input2am');
 var btn2am = document.getElementById("2ambtn");
 var del2am = document.getElementById("2amdel");
@@ -50,16 +50,16 @@ function check2am() {
         let x = localStorage.getItem("task2am");
         input2am.innerText = x;
     }
-    if (b == "02") {
+    if (b == "10") {
         block2am.classList.add("present");
-    } else if (b > "02") {
+    } else if (b > "10") {
         block2am.classList.add("past");
     } else {
         block2am.classList.add("future");
     }
 }
 
-// Code for 3am block
+// Code for 11am block
 var input3am = document.getElementById('input3am');
 var btn3am = document.getElementById("3ambtn");
 var del3am = document.getElementById("3amdel");
@@ -78,16 +78,16 @@ function check3am() {
         let x = localStorage.getItem("task3am");
         input3am.innerText = x;
     }
-    if (b == "03") {
+    if (b == "11") {
         block3am.classList.add("present");
-    } else if (b > "03") {
+    } else if (b > "11") {
         block3am.classList.add("past");
     } else {
         block3am.classList.add("future");
     }
 }
 
-// Code for 4am block
+// Code for 12pm block
 var input4am = document.getElementById('input4am');
 var btn4am = document.getElementById("4ambtn");
 var del4am = document.getElementById("4amdel");
@@ -106,16 +106,16 @@ function check4am() {
         let x = localStorage.getItem("task4am");
         input4am.innerText = x;
     }
-    if (b == "04") {
+    if (b == "12") {
         block4am.classList.add("present");
-    } else if (b > "04") {
+    } else if (b > "12") {
         block4am.classList.add("past");
     } else {
         block4am.classList.add("future");
     }
 }
 
-// Code for 5am block
+// Code for 1pm block
 var input5am = document.getElementById('input5am');
 var btn5am = document.getElementById("5ambtn");
 var del5am = document.getElementById("5amdel");
@@ -134,16 +134,16 @@ function check5am() {
         let x = localStorage.getItem("task5am");
         input5am.innerText = x;
     }
-    if (b == "05") {
+    if (b == "13") {
         block5am.classList.add("present");
-    } else if (b > "05") {
+    } else if (b > "13") {
         block5am.classList.add("past");
     } else {
         block5am.classList.add("future");
     }
 }
 
-// Code for 6am block
+// Code for 2pm block
 var input6am = document.getElementById('input6am');
 var btn6am = document.getElementById("6ambtn");
 var del6am = document.getElementById("6amdel");
@@ -162,16 +162,16 @@ function check6am() {
         let x = localStorage.getItem("task6am");
         input6am.innerText = x;
     }
-    if (b == "06") {
+    if (b == "14") {
         block6am.classList.add("present");
-    } else if (b > "06") {
+    } else if (b > "14") {
         block6am.classList.add("past");
     } else {
         block6am.classList.add("future");
     }
 }
 
-// Code for 7am block
+// Code for 3pm block
 var input7am = document.getElementById('input7am');
 var btn7am = document.getElementById("7ambtn");
 var del7am = document.getElementById("7amdel");
@@ -190,11 +190,67 @@ function check7am() {
         let x = localStorage.getItem("task7am");
         input7am.innerText = x;
     }
-    if (b == "07") {
+    if (b == "15") {
         block7am.classList.add("present");
-    } else if (b > "07") {
+    } else if (b > "15") {
         block7am.classList.add("past");
     } else {
         block7am.classList.add("future");
+    }
+}
+
+// Code for 4pm block
+var input8am = document.getElementById('input8am');
+var btn8am = document.getElementById("8ambtn");
+var del8am = document.getElementById("8amdel");
+var block8am = document.getElementById('8am');
+check8am();
+btn8am.addEventListener("click", function(){
+    localStorage.setItem("task8am", input8am.value);
+    check8am();
+})
+del8am.addEventListener("click", function(){
+    localStorage.removeItem("task8am");
+    input8am.textContent = '';
+})
+function check8am() {
+    if (localStorage.getItem("task8am")) {
+        let x = localStorage.getItem("task8am");
+        input8am.innerText = x;
+    }
+    if (b == "16") {
+        block8am.classList.add("present");
+    } else if (b > "16") {
+        block8am.classList.add("past");
+    } else {
+        block8am.classList.add("future");
+    }
+}
+
+// Code for 5pm block
+var input5pm = document.getElementById('input5pm');
+var btn5pm = document.getElementById("5pmbtn");
+var del5pm = document.getElementById("5pmdel");
+var block5pm = document.getElementById('5pm');
+check5pm();
+btn5pm.addEventListener("click", function(){
+    localStorage.setItem("task5pm", input5pm.value);
+    check5pm();
+})
+del5pm.addEventListener("click", function(){
+    localStorage.removeItem("task5pm");
+    input5pm.textContent = '';
+})
+function check5pm() {
+    if (localStorage.getItem("task5pm")) {
+        let x = localStorage.getItem("task5pm");
+        input5pm.innerText = x;
+    }
+    if (b == "17") {
+        block5pm.classList.add("present");
+    } else if (b > "17") {
+        block5pm.classList.add("past");
+    } else {
+        block5pm.classList.add("future");
     }
 }
