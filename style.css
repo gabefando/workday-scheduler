@@ -5,9 +5,9 @@ body {
 }
 
 textarea {
-  background: transparent;
-  border: none;
+  background: white;
   resize: none;
+  width: 750px;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
